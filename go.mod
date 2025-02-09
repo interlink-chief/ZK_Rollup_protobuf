@@ -1,6 +1,6 @@
 module github.com/interl1nk/ZK_Rollup_protobuf
 
-go 1.23.5
+go 1.23
 
 require (
 	google.golang.org/grpc v1.70.0
