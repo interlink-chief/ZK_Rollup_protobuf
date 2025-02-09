@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package data;
+
+option go_package = "interl1nk.zk_rollup_protobuf.v1;protobufv1";
+
+service Data {
+  rpc GetGenData (GenRequest) returns (GenResponse);
+}
+
+message GenRequest {
+  string gen = 1;
+}
+
+message GenResponse {
+  string gen = 1;
+  bool valid = 2;
+}
