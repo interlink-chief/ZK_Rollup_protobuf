@@ -8,11 +8,23 @@ service Data {
   rpc GetGenData (GenRequest) returns (GenResponse);
 }
 
-message GenRequest {
-  string gen = 1;
+message GeneEdit {
+  string gene = 1;
+  string modification = 2;
+  uint64 position = 3;
 }
 
-message GenResponse {
+message Transaction {
+  uint64 transaction_id = 1;
+  string sender = 2;
+  string recipient = 3;
+  string patient_id = 4;
+  GeneEdit gene_edit = 5;
+  string method = 6;
+  uint64 timestamp = 7;
+}
+
+message Response {
   string gen = 1;
   bool valid = 2;
 }
